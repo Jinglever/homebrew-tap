@@ -5,12 +5,12 @@
 class MetaEgg < Formula
   desc "Awesome Tools to Generate MetaEgg Framework"
   homepage "https://github.com/Jinglever/meta-egg"
-  version "3.4.17"
+  version "3.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Jinglever/meta-egg/releases/download/v3.4.17/meta-egg-darwin-amd64.zip"
-      sha256 "51d01a216c093c80731af2c02a5783421962890d3315b36a3bcf8c131fd5d5a6"
+      url "https://github.com/Jinglever/meta-egg/releases/download/v3.5.0/meta-egg-darwin-amd64.zip"
+      sha256 "71135fee2507a46eccdf71e7cc7a3e4619142a9d9ae1fdf7d57ada35d574a5f0"
 
       def install
         bin.install "meta-egg"
@@ -18,8 +18,8 @@ class MetaEgg < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Jinglever/meta-egg/releases/download/v3.4.17/meta-egg-darwin-arm64.zip"
-      sha256 "3d126903bd069f25af6a75066f84a1054b913f6f28ca9a2065afbb8af97208e3"
+      url "https://github.com/Jinglever/meta-egg/releases/download/v3.5.0/meta-egg-darwin-arm64.zip"
+      sha256 "ff7e80077d0c6badf2ccf1b9bbaaaac881d494794555001f9f7f38f76286ed28"
 
       def install
         bin.install "meta-egg"
@@ -30,16 +30,16 @@ class MetaEgg < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Jinglever/meta-egg/releases/download/v3.4.17/meta-egg-linux-amd64.zip"
-      sha256 "5f2a4842cdda3adcc0508577a1529dc9be6720f1631eec67830223ee6636c90e"
+      url "https://github.com/Jinglever/meta-egg/releases/download/v3.5.0/meta-egg-linux-amd64.zip"
+      sha256 "2bd7d9d2433cdaa6fb71f6825f541888fbc8d41bda24289ccdbacee691155202"
       def install
         bin.install "meta-egg"
         generate_completions_from_executable("#{bin}/meta-egg", "completion")
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Jinglever/meta-egg/releases/download/v3.4.17/meta-egg-linux-arm64.zip"
-      sha256 "e68173a8904a338167b15c0f28e013604a383c0e01a27e10acfc86325f12bf70"
+      url "https://github.com/Jinglever/meta-egg/releases/download/v3.5.0/meta-egg-linux-arm64.zip"
+      sha256 "671a1a7096e9c15b653ee616300b5418dddc12c5acca60657f9f5e0c83ef5d16"
       def install
         bin.install "meta-egg"
         generate_completions_from_executable("#{bin}/meta-egg", "completion")
